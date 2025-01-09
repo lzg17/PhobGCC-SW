@@ -688,8 +688,8 @@ void applyJump(const ControlConfig &controls, const Buttons &hardware, Buttons &
 			btn.R = hardware.X;
 			break;
 		case SWAP_YR:
-			btn.Y = hardware.R;
-			btn.R = hardware.Y;
+			btn.Y = hardware.Du;
+			btn.X = hardware.Dd;
 			break;
 		default:
 			break;
