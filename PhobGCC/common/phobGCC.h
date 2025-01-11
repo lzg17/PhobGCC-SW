@@ -688,8 +688,10 @@ void applyJump(const ControlConfig &controls, const Buttons &hardware, Buttons &
 			btn.R = hardware.X;
 			break;
 		case SWAP_YR: // mario kart wii thingaling
-			btn.Y = hardware.Du;
-			btn.X = hardware.Dd;
+			//btn.Y = hardware.Du;
+			//btn.X = hardware.Dd;
+			btn.Du = hardware.Y;
+			btn.Dd = hardware.X;
 			break;
 		default:
 			break;
