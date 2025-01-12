@@ -667,9 +667,14 @@ void changeTournamentToggle(Buttons &btn, Buttons &hardware, ControlConfig &cont
 //apply digital button swaps for L, R, or Z jumping
 void applyJump(const ControlConfig &controls, const Buttons &hardware, Buttons &btn){
 	switch(controls.jumpConfig){
-		case SWAP_XZ:
-			btn.X = hardware.Z;
-			btn.Z = hardware.X;
+		case SWAP_XZ: // attempting this for THE KART
+			//btn.X = hardware.Z;
+			//btn.Z = hardware.X;
+			btn.Du = hardware.Y;
+			btn.Dd = hardware.X;
+			btn.Y = hardware.Du;
+			btn.X = hardware.Dd;
+			btn.Z = hardware.Z;
 			break;
 		case SWAP_YZ:
 			btn.Y = hardware.Z;
